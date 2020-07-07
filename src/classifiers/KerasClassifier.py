@@ -1,8 +1,8 @@
-import keras
+from tensorflow import keras
 import numpy as np
 from keras_preprocessing.sequence import pad_sequences
-from keras.layers import Dense, Dropout, Conv1D, Activation, Flatten, MaxPooling1D
-from keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Conv1D, Activation, Flatten, MaxPooling1D
+from tensorflow.keras.models import Sequential
 
 from src.sound.SoundTransformer import SoundTransformer
 

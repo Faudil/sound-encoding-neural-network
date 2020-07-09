@@ -24,8 +24,8 @@ class KerasClassifier:
     def load(self, file_path):
         self._model = keras.models.load_model(file_path)
 
-    def train(self, X, Y, batch_size=32, epoch=720):
-        self._model.fit(X, Y, batch_size=batch_size, epochs=epoch)
+    def train(self, X, Y, batch_size=32, epoch=720, validation_data=None):
+        self._model.fit(X, Y, batch_size=batch_size, epochs=epoch, validation_data=validation_data)
 
     def predict(self, x):
         return self._model.predict(x)

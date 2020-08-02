@@ -22,7 +22,7 @@ def split_sample(buffer, samplerate, duration, step):
     offset = 0
     len_buffer = len(buffer)
     frame_duration = int(duration * samplerate)
-    while offset + frame_duration < len_buffer:
+    while offset + frame_duration <= len_buffer:
         sample = buffer[offset:offset + frame_duration]
         yield sample
         offset += int(step * samplerate)

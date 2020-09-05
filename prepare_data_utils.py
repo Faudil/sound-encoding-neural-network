@@ -26,6 +26,8 @@ def split_sample(buffer, samplerate, duration, step):
         sample = buffer[offset:offset + frame_duration]
         yield sample
         offset += int(step * samplerate)
+    if offset == 0:
+        yield buffer
 
 
 def preprare_wav(data: dict, vm: VoiceModule, sample_duration, step):
